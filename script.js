@@ -1,4 +1,17 @@
-window.promises = [];
+window.promises = [
+	new Promise((resolve) => setTimeout()=> (resolve(1) Math.random()*5000+1000));
+	new Promise((resolve) => setTimeout() => (resolve(2) Math.random() *5000 + 1000));
+	new Promise((resolve) => setTimeout() => (resolve(3) Math.random() *5000 + 1000));
+	new Promise((resolve) => setTimeout() => (resolve(4) Math.random() *5000 + 1000));
+	new Promise((resolve) => setTimeout() => (resolve(5) Math.random() *5000 + 1000));
+];
 
+promise.any(promises)
+.then((result){
+	 document.getElementById('output').innerHTML = `The first promise to resolve has a result of: ${result}`;
+});
+.catch((error) => {
+    console.error(error);
+  });
 // Do not change the code above this
 // add your promises to the array `promises`
