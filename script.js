@@ -8,7 +8,7 @@ window.promises = [
 
 promise.any(promises)
 .then((result){
-	 document.getElementById('output').innerHTML = `The first promise to resolve has a result of: ${result}`;
+	 document.getElementById('output').innerHTML = `${result}`;
 });
 .catch((error) => {
     console.error(error);
